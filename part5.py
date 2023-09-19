@@ -376,3 +376,13 @@ import pytz
 
 
 """
+from datetime import datetime
+#
+# def cate_zile(data_nastere):
+#     data_curenta = datetime.now().date()
+#     diferenta = data_nastere - data_curenta
+#     return diferenta.days
+#
+# data_mea = datetime(2023, 11,13).date()
+# print(cate_zile(data_mea))
+
