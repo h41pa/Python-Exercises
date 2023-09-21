@@ -98,44 +98,93 @@ doar dacă ai ales să implementezi metoda abstractă aria)
 
 
 """
+#
+# from abc import ABC, abstractmethod
+#
+#
+# class FormaGeometrica(ABC):
+#     PI = 3.14
+#
+#     @abstractmethod
+#     def aria(self):
+#        return NotImplementedError
+#
+#
+#     @classmethod
+#     def describe(cls):
+#         print("Cel mai probabil am colțuri")
+#
+#
+#
+# class Cerc(FormaGeometrica):
+#     def __init__(self, raza):
+#         self.__raza = raza
+#
+#     @property
+#     def raza(self):
+#         return self.__raza
+#     @raza.setter
+#     def raza(self, noua_raza):
+#         self.__raza =  noua_raza
+#     @raza.deleter
+#     def raza(self):
+#         print('Nu poti sterge raza')
+#
+#     def aria(self):
+#         return self.PI * (self.raza ** 2)
+#
+# cerc1 = Cerc(4)
+# print(f'Raza cercului este de {cerc1.raza}')
+# print(f'Aria Cercului este {cerc1.aria()}')
+# cerc1.raza = 7
+# print(f'Noua raza cercului este de {cerc1.raza}')
+# print(f'Noua arie a cercului este {cerc1.aria()}')
 
-from abc import ABC, abstractmethod
+"""
+POLYMORPHISM 
+Definește o nouă metodă descrie - printează ‘Eu nu am colturi’
+
+Creează un obiect de tip Pătrat și joacă-te cu metodele lui
+Creează un obiect de tip Cerc și joacă-te cu metodele lui
 
 
-class FormaGeometrica(ABC):
-    PI = 3.14
+"""
 
-    @abstractmethod
-    def aria(self):
-       return NotImplementedError
+# from abc import ABC, abstractmethod
+#
+#
+# class FormaGeometrica(ABC):
+#     PI = 3.14
+#
+#     @abstractmethod
+#     def aria(self):
+#        return NotImplementedError
+#
+#
+#     @classmethod
+#     def describe(cls):
+#         print("Cel mai probabil am colțuri")
+#
+#
+# class Cerc(FormaGeometrica):
+#     def __init__(self, raza):
+#         self.raza = raza
+#
+#
+#
+#     def aria(self):
+#         return self.PI * (self.raza ** 2)
+#
+#     def describe(cls):
+#         print('Eu nu am colturi')
+#
+# class Patrat(FormaGeometrica):
+#     def __init__(self, latura):
+#         self.atura = latura
+#
+#
+#
+#     def aria(self):
+#         return self.__latura * 2
 
-
-    @classmethod
-    def describe(cls):
-        print("Cel mai probabil am colțuri")
-
-
-
-class Cerc(FormaGeometrica):
-    def __init__(self, raza):
-        self.__raza = raza
-
-    @property
-    def raza(self):
-        return self.__raza
-    @raza.setter
-    def raza(self, noua_raza):
-        self.__raza =  noua_raza
-    @raza.deleter
-    def raza(self):
-        print('Nu poti sterge raza')
-
-    def aria(self):
-        return self.PI * (self.raza ** 2)
-
-cerc1 = Cerc(4)
-print(f'Raza cercului este de {cerc1.raza}')
-print(f'Aria Cercului este {cerc1.aria()}')
-cerc1.raza = 7
-print(f'Noua raza cercului este de {cerc1.raza}')
-print(f'Noua arie a cercului este {cerc1.aria()}')
+# metoda describe are acelasi nume dar comportament diferit
