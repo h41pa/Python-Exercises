@@ -74,49 +74,49 @@ print(f'In engleza zicem {english_trans.localize("masina")}')
 print(f'In spaniola zicem {spanish_trans.localize("masina")}')
 
 """
-class EnglishTranslator:
-    translations = {"masina": "car", "culoare": "color", "apa": "water"}
-
-    def localize(self, word):
-        if word in self.translations:
-            print(f"Traducerea pentru {word} in engleza este {self.translations[word]}")
-        else:
-            print(f"Traducerea lipseste din dictionar")
-
-class FrenchTranslator:
-    translations = {"masina": "voiture", "culoare": "couleur", "apa": "eau"}
-
-    def localize(self, word):
-        if word in self.translations:
-            print(f"Traducerea pentru {word} in franceza este {self.translations[word]}")
-        else:
-            print(f"Traducerea lipseste din dictionar")
-
-
-class SpanishTranslator:
-    translations = {"masina": "coche", "culoare": "color", "apa": "agua"}
-
-    def localize(self, word):
-        if word in self.translations:
-            print(f"Traducerea pentru {word} in spaniola este {self.translations[word]}")
-        else:
-            print(f"Traducerea lipseste din dictionar")
-
-
-class TranslatorFactory:
-    def get_language(self, language):
-        if language == 'en':
-            return EnglishTranslator()
-
-        elif language == 'fr':
-            return FrenchTranslator()
-        elif language == 'es':
-            return SpanishTranslator
-        else:
-            return  ValueError(f'limba nu exista {language}')
-
-factory = TranslatorFactory()
-english_trans = factory.get_language('en')
-english_trans.localize('masina')
-french_trans = factory.get_language('fr')
-french_trans.localize('masina')
+# class EnglishTranslator:
+#     translations = {"masina": "car", "culoare": "color", "apa": "water"}
+#
+#     def localize(self, word):
+#         if word in self.translations:
+#             print(f"Traducerea pentru {word} in engleza este {self.translations[word]}")
+#         else:
+#             print(f"Traducerea lipseste din dictionar")
+#
+# class FrenchTranslator:
+#     translations = {"masina": "voiture", "culoare": "couleur", "apa": "eau"}
+#
+#     def localize(self, word):
+#         if word in self.translations:
+#             print(f"Traducerea pentru {word} in franceza este {self.translations[word]}")
+#         else:
+#             print(f"Traducerea lipseste din dictionar")
+#
+#
+# class SpanishTranslator:
+#     translations = {"masina": "coche", "culoare": "color", "apa": "agua"}
+#
+#     def localize(self, word):
+#         if word in self.translations:
+#             print(f"Traducerea pentru {word} in spaniola este {self.translations[word]}")
+#         else:
+#             print(f"Traducerea lipseste din dictionar")
+#
+#
+# class TranslatorFactory:
+#     def get_language(self, language):
+#         if language == 'en':
+#             return EnglishTranslator()
+#
+#         elif language == 'fr':
+#             return FrenchTranslator()
+#         elif language == 'es':
+#             return SpanishTranslator
+#         else:
+#             return  ValueError(f'limba nu exista {language}')
+#
+# factory = TranslatorFactory()
+# # english_trans = factory.get_language('en')
+# # english_trans.localize('masina')
+# # french_trans = factory.get_language('fr')
+# # french_trans.localize('masina')
