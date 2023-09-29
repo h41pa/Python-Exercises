@@ -96,3 +96,48 @@ I am the 24th letter of the alphabet.
 #         for line in my_file:
 #             print(line)
 
+"""
+
+5.	Create a csv file called “students.csv” and add the following text inside of it:
+id,fname,lname,age,grade
+1,Maria,Popescu,31,7.5
+2,Andrei,Ionescu,26,8.0
+3,Adriana,Marinescu,21,7.5
+4,Matei,Gheorghescu,42,8.5
+5,Eusebiu,Pop,33,9.5
+6,Ioana,Popa,29,9.0
+Read the file using Python’s `csv` standard library, and display it in the terminal as a table, using the options for string formatting from Python:
+
+
+
+id	fname		lname		age	grade
+---------------------------------------------------
+1	Maria		Popescu		31	7.5
+2	Andrei		Ionescu		26	8.0
+3	Adriana		Marinescu		21	7.5
+4	Matei		Gheorghescu	42	8.5
+5	Eusebiu		Pop			33	9.5
+6	Ioana		Popa			29	9.0
+
+"""
+import csv
+# data = [
+#     ["id", "fname", "lname", "age", "grade"],
+#     [1, "Maria", "Popescu", 31, 7.5],
+#     [2, "Andrei", "Ionescu", 26, 8.0],
+#     [3, "Adriana", "Marinescu", 21, 7.5],
+#     [4, "Matei", "Gheorghescu", 42, 8.5],
+#     [5, "Eusebiu", "Pop", 33, 9.5],
+#     [6, "Ioana", "Popa", 29, 9.0]
+# ]
+#
+# with open('files/students.csv', 'w') as writecsv:
+#     writer = csv.writer(writecsv)
+#     writer.writerows(data)
+
+with open('files/students.csv', "r") as read_csv:
+    my_file = csv.reader(read_csv)
+    print('_' * 50)
+    for line in my_file:
+        print(f"{line[0]:^5}| {line[1]:^10}| {line[2]:^15}|{line[3]:^8}|{line[4]:^8}")
+        print('.' * 50)
