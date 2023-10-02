@@ -120,7 +120,7 @@ id	fname		lname		age	grade
 6	Ioana		Popa			29	9.0
 
 """
-import csv
+# import csv
 # data = [
 #     ["id", "fname", "lname", "age", "grade"],
 #     [1, "Maria", "Popescu", 31, 7.5],
@@ -135,9 +135,9 @@ import csv
 #     writer = csv.writer(writecsv)
 #     writer.writerows(data)
 
-with open('files/students.csv', "r") as read_csv:
-    my_file = csv.reader(read_csv)
-    print('_' * 50)
-    for line in my_file:
-        print(f"{line[0]:^5}| {line[1]:^10}| {line[2]:^15}|{line[3]:^8}|{line[4]:^8}")
-        print('.' * 50)
+# with open('files/students.csv', 'r') as read_csv:
+#     my_file = csv.reader(read_csv)
+#     print('_' * 55)
+#     for line in my_file:
+#         print(f'{line[0]:^5}| {line[1]:<10}| {line[2]:<15}| {line[3]:^8}| {line[4]:^8}')
+#         print('_' * 55)
