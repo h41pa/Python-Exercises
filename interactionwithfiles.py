@@ -141,3 +141,34 @@ id	fname		lname		age	grade
 #     for line in my_file:
 #         print(f'{line[0]:^5}| {line[1]:<10}| {line[2]:<15}| {line[3]:^8}| {line[4]:^8}')
 #         print('_' * 55)
+"""
+6.	Read again the information from the csv file above, store it all in a list of data, and then write a new file, called “students.json”, which will contain a valid JSON object. Use the following format for each student (and use Python’s standard JSON module):
+[
+	{
+		"id": 1,
+		"fname": "Maria",
+		"lname": "Popescu",
+		"age": 31,
+		"grade": 7.5	
+	},
+	...
+]
+
+"""
+
+import csv
+import json
+with open('files/students.csv', 'r') as my_csv:
+    my_file = csv.reader(my_csv)
+    my_json_file = list(my_file)
+    for i in range(1, len(my_json_file)):
+        dict_add = {
+            "id": my_json_file[i][0],
+            "fname": my_json_file[i][1],
+            "lname": my_json_file[i][2],
+            "age": my_json_file[i][3],
+            "grade": my_json_file[i][4]
+        }
+
+        with open('files/students.json', 'a') as new_json:
+            json.dump(dict_add, new_json, indent=4)
