@@ -37,3 +37,61 @@ pentru finalizarea la timp a cărților”.
 #     print(f"Maria citeste {ratio:.2f} ori mai multe cuvinte pe zi pentru a finaliza la timp cartile.")
 # else:
 #     print(f'Maria citeste de {1 / ratio:.2f} ori mai putine cuvinte pe zi pentru a finaliza la timp cartile')
+
+"""
+Ascude vocalele!. Să se scrie un "translator" care să modifice vocalele în "*" utilizând ciclul while și if.
+"""
+#
+# text = str(input("Introduceti textul pentru a ascunde vocalele: "))
+# text_nou = ""
+# i = 0
+#
+# while i < len(text):
+#     if text[i] in "aeiouAEIOU":
+#         text_nou += "*"
+#     else:
+#         text_nou += text[i]
+#     i += 1
+# print(text_nou)
+
+notite = []
+
+
+def adauga_nota():
+    nota = input("Introduceti o nota : ")
+    notite.append(nota)
+    print("Nota a fost adaugata")
+
+def afiseaza_notite():
+    for i, nota in enumerate(notite, start=1):
+        print(f'{1}. {nota}')
+
+def sterge_nota():
+    afiseaza_notite()
+    index = int(input("Selectati nota de sters (introduceti numarul): "))
+    if 0 <= index < len(notite):
+        nota_stearsa = notite.pop(index)
+        print(f"Nota '{nota_stearsa}' a fost stearsa")
+    else:
+        print("Selectare invalida!")
+
+while True:
+    print("\nOpțiuni:")
+    print("1. Adaugă notă")
+    print("2. Afisează notițele")
+    print("3. Șterge notă")
+    print("4. Ieșire")
+
+    optiune = input("Introduceți numărul opțiunii: ")
+
+    if optiune == "1":
+        adauga_nota()
+    elif optiune == "2":
+        afiseaza_notite()
+    elif optiune == "3":
+        sterge_nota()
+    elif optiune == "4":
+        print("La revedere")
+        break
+    else:
+        print("optiune invalida")
