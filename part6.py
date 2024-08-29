@@ -62,9 +62,11 @@ def adauga_nota():
     notite.append(nota)
     print("Nota a fost adaugata")
 
+
 def afiseaza_notite():
     for i, nota in enumerate(notite, start=1):
         print(f'{1}. {nota}')
+
 
 def sterge_nota():
     afiseaza_notite()
@@ -74,6 +76,7 @@ def sterge_nota():
         print(f"Nota '{nota_stearsa}' a fost stearsa")
     else:
         print("Selectare invalida!")
+
 
 while True:
     print("\nOpțiuni:")

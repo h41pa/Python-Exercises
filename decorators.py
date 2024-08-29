@@ -91,3 +91,4 @@ Se va testa apelarea metodei get_info inainte de logare, dupa logare, dupa delog
 # user1.login('madalin@ceva.ro','1234')
 # # user1.logout()
 # user1.get_info()
+
